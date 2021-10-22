@@ -6,20 +6,20 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     s.min = 0;
     s.max = 0;
     
-    // Average
-    sum = 0;
-    for( int i = 0; i < setlength; i++ ){
+    //Avg, Min, Max
+   float max = numberset[0], min = numberset[0], sum = 0;
+   for(int i = 1; i < setlength; i++){
         sum += numberset[i];
-    }
-    s.average = sum /setlength;
+        if(numberset[i] > max) 
+            max = numberset[i];
+        if(numberset[i] < min)
+            min =  numberset[i];
+    } 
+    sum += numberset[0];
     
-    //Max
-    
-    
-    //Min
-    
-}
-    
+     s.average = sum /setlength;
+     s.min = min;
+     s.max = max;   
 }
 
 int emailAlertCallCount = 0;
