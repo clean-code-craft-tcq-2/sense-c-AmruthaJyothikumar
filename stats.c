@@ -32,7 +32,7 @@ int main(){
      struct Stats s;
      printf("Pass");
  
- return ;
+ return 0;
 }
 
 
