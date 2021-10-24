@@ -20,13 +20,8 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
      s.average = sum /setlength;
      s.min = min;
      s.max = max;   
-}
-
-int emailAlertCallCount = 0;
-int ledAlertCallCount = 0;
-
-void main()
-{
-   
     
+    return s;
 }
+
+
