@@ -29,3 +29,4 @@ TEST_CASE("average is NaN for empty array") {
     REQUIRE(isnan((computedStats.min)));
 }
   
+
