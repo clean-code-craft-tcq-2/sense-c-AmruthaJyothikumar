@@ -14,9 +14,9 @@ TEST_CASE("reports average, minimum and maximum") {
     REQUIRE(abs(computedStats.average - 4.525) < epsilon);
     REQUIRE(abs(computedStats.max - 8.9) < epsilon);
     REQUIRE(abs(computedStats.min - 1.5) < epsilon);
-}
 
-TEST_CASE("average is NaN for empty array") {
+
+SECTION("average is NaN for empty array") {
     Stats computedStats = compute_statistics(0, 0);   
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
@@ -29,4 +29,4 @@ TEST_CASE("average is NaN for empty array") {
     REQUIRE(isnan((computedStats.min)));
 }
   
-
+}
