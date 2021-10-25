@@ -9,6 +9,12 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     s.max = 0;
     
     //Avg, Min, Max
+    if(setlength =0){
+        s.average = NAN;
+        s.min = NAN;
+        s.max = NAN;
+    }
+    else {
    float max = numberset[0], min = numberset[0], sum = 0;
    for(int i = 1; i < setlength; i++){
         sum += numberset[i];
@@ -22,7 +28,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
      s.average = sum /setlength;
      s.min = min;
      s.max = max;   
-    
+    }
     return s;
 }
 
