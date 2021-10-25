@@ -1,5 +1,6 @@
 #include "stats.h"
 
+struct Stats s;
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
@@ -25,11 +26,6 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     return s;
 }
 
-int main(){
-     struct Stats s;
-     
- 
- return 0;
-}
+
 
 
