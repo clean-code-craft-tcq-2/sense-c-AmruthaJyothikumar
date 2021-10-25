@@ -17,7 +17,7 @@ TEST_CASE("reports average, minimum and maximum") {
 }
 
 TEST_CASE("average is NaN for empty array") {
-    float *numberset[] = NULL;
+    float numberset[] = NULL;
     struct Stats computedStats = compute_statistics(numberset, 0);
     //struct Stats computedStats = compute_statistics(0, 0);   
     //All fields of computedStats (average, max, min) must be
