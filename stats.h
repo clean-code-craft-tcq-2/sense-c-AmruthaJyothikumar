@@ -1,8 +1,13 @@
 
-struct Stats compute_statistics(const float* numberset, int setlength);
+struct Stats{	
+	float average, min, max;
+	};
 
-typedef void (*alerter_funcptr)();
-void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats);
+	struct Stats compute_statistics(const float* numberset, int setlength);
 
-extern int emailAlertCallCount;
-extern int ledAlertCallCount;
+	typedef void (*alerter_funcptr)();
+	void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats);
+
+	extern int emailAlertCallCount;
+	extern int ledAlertCallCount;
+
